@@ -14,12 +14,13 @@ namespace exercicioAula07_Casa
     internal class Program
     {
         public static double numeroFinal = 0,
-            expresso = 3.00,
-                capuccino = 4.50,
-                mocaccino = 6.50,
-                aguaQuente = 1,
-                opcao;
-        public static double Saldo = 0;
+                             expresso = 3.00,
+                             capuccino = 4.50,
+                             mocaccino = 6.50,
+                             aguaQuente = 1,
+                             opcao,
+                             Saldo = 0;
+        
 
         /*  Você recebeu do seu cliente as seguintes instruções para construir a máquina:
              • A máquina deve perguntar ao usuário o valor que ele quer depositar/inserir
@@ -71,9 +72,9 @@ namespace exercicioAula07_Casa
                     Console.Clear();
 
                     opcoes();
-
                 }
 
+                
                 if (e1 != "s" && e1 != "n")
                 {
                     Console.WriteLine("Digite uma opção válida !!!");
@@ -81,6 +82,8 @@ namespace exercicioAula07_Casa
                     Main(null);
                     return;
                 }
+                
+                
                 if (e1 == "s")
                 {
                     Console.WriteLine("Digite uma tecla para encerrar!!");
@@ -91,6 +94,8 @@ namespace exercicioAula07_Casa
                     Console.Clear();
                     return;
                 }
+                
+                
                 if (e1 == "n")
                 {
                     Console.WriteLine("Quer encerrar ?? (s/n)");
@@ -106,16 +111,19 @@ namespace exercicioAula07_Casa
                         Console.Clear();
                         return;
                     }
+                    
+                    
                     Console.Clear();
                     Main(null);
  
                     return;
                 }
+                
             }
+            
 
             if (Saldo == 0)
             {
-
                 if (escolha == "n")
                 {
                     Console.WriteLine("\n\n Aperte qualquer tecla para finalizarmos!!");
@@ -123,7 +131,6 @@ namespace exercicioAula07_Casa
                     Console.Clear();
                     return;
                 }
-
             }
 
             Console.WriteLine("Insira um valor: ");
@@ -167,6 +174,8 @@ namespace exercicioAula07_Casa
                 Console.ReadKey();
                 return;
             }
+            
+            
             else if (numeroFinal == 21)
             {
                 Console.WriteLine("Você GANHOOOOOU!!");
@@ -174,6 +183,8 @@ namespace exercicioAula07_Casa
                 Console.ReadKey();
                 return;
             }
+            
+            
             Console.WriteLine($"Total:{numeroFinal}");
             Console.WriteLine($"Numero sorteado:{numeroSorteado}");
             Console.WriteLine("\n\nGostaria de puxar mais uma carta: (s/n)");
@@ -186,6 +197,8 @@ namespace exercicioAula07_Casa
                 Console.ReadKey();
                 return;
             }
+            
+            
             Console.ReadKey();
             Console.Clear();
 
@@ -216,6 +229,8 @@ namespace exercicioAula07_Casa
                 Main(null);
 
             }
+            
+            
 
             if (opcao == 1 && Saldo > expresso)
             {
@@ -231,6 +246,7 @@ namespace exercicioAula07_Casa
 
 
             }
+          
 
             if (opcao == 2 && Saldo > capuccino)
             {
@@ -245,6 +261,7 @@ namespace exercicioAula07_Casa
 
 
             }
+            
 
             if (opcao == 3 && Saldo > mocaccino)
             {
@@ -259,6 +276,7 @@ namespace exercicioAula07_Casa
 
 
             }
+            
 
             if (opcao == 4 && Saldo > aguaQuente)
             {
@@ -270,12 +288,9 @@ namespace exercicioAula07_Casa
                 Console.Clear();
                 Main(null);
                 return;
-
-
             }
+            
         }
-
-
     }
 
 }
